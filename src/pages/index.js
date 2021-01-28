@@ -1,150 +1,175 @@
 import * as React from "react"
+import Img from 'gatsby-image'
+import { graphql } from 'gatsby'
+import tw, { styled } from 'twin.macro'
 
-// styles
-const pageStyles = {
-  color: "#232129",
-  padding: "96px",
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
-const headingAccentStyles = {
-  color: "#663399",
-}
-const paragraphStyles = {
-  marginBottom: 48,
-}
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-}
-const listStyles = {
-  marginBottom: 96,
-  paddingLeft: 0,
-}
-const listItemStyles = {
-  fontWeight: "300",
-  fontSize: "24px",
-  maxWidth: "560px",
-}
+import Page from '../components/Page'
+import PaineSVG from '../components/PaineSVG'
 
-const linkStyle = {
-  color: "#8954A8",
-  fontWeight: "bold",
-  fontSize: "16px",
-  verticalAlign: "5%",
-}
+const Title = styled.div`
+  ${tw`xl:text-6xl text-5xl mb-4`};
+` 
 
-const docLinkStyle = {
-  ...linkStyle,
-  listStyleType: "none",
-  marginBottom: 24,
-}
+const Subtitle = styled.div`
+  ${tw`xl:text-3xl text-2xl mb-4`};
+` 
 
-const descriptionStyle = {
-  color: "#232129",
-  fontSize: "14px",
-}
+const ContentContainer = styled.div`
+  ${tw`container mx-auto px-4`};
+`
 
-const docLink = {
-  text: "Documentation",
-  url: "https://www.gatsbyjs.com/docs/",
-  color: "#8954A8",
-}
-// data
-const links = [
-  {
-    text: "Tutorial",
-    url: "https://www.gatsbyjs.com/docs/tutorial/",
-    description:
-      "A great place to get started if you're new to web development. Designed to guide you through setting up your first Gatsby site.",
-    color: "#E95800",
-  },
-  {
-    text: "How to Guides",
-    url: "https://www.gatsbyjs.com/docs/how-to/",
-    description:
-      "Practical step-by-step guides to help you achieve a specific goal. Most useful when you're trying to get something done.",
-    color: "#1099A8",
-  },
-  {
-    text: "Reference Guides",
-    url: "https://www.gatsbyjs.com/docs/reference/",
-    description:
-      "Nitty-gritty technical descriptions of how Gatsby works. Most useful when you need detailed information about Gatsby's APIs.",
-    color: "#BC027F",
-  },
-  {
-    text: "Conceptual Guides",
-    url: "https://www.gatsbyjs.com/docs/conceptual/",
-    description:
-      "Big-picture explanations of higher-level Gatsby concepts. Most useful for building understanding of a particular topic.",
-    color: "#0D96F2",
-  },
-  {
-    text: "Plugin Library",
-    url: "https://www.gatsbyjs.com/plugins",
-    description:
-      "Add functionality and customize your Gatsby site or app with thousands of plugins built by our amazing developer community.",
-    color: "#000000",
-  },
-]
+const FlexContainerFull = styled.div`
+  ${tw`flex flex-row justify-center items-center h-screen`};
+`
 
-// markup
-const IndexPage = () => {
+const Row = styled.div`
+  ${tw`grid grid-cols-4 gap-8`};
+`
+
+const TextContainer = styled.div`
+  ${tw`font-sans leading-normal xl:col-span-3 lg:col-span-3 md:col-span-4 sm:col-span-full col-span-full`};
+`
+
+const SVGContainer = styled.div`
+  ${tw`xl:col-span-1 lg:col-span-1 md:col-span-4 sm:col-span-full col-span-full`}
+`
+
+const ProjectTextContainer = styled.div`
+  ${tw`font-sans leading-normal xl:col-span-2 lg:col-span-2 md:col-span-4 sm:col-span-full col-span-full`};
+`
+
+const ScreenshotContainer = styled.div`
+  ${tw`xl:col-span-2 lg:col-span-2 md:col-span-4 sm:col-span-full col-span-full`}
+`
+
+const Paragraph = styled.div`
+  ${tw`font-sans leading-normal`}
+`
+
+const ContactRow = styled.div`
+  ${tw`mt-6 flex`};
+`
+
+const ContactLink = styled.a`
+  ${tw`font-sans mr-2`}
+`
+
+const Button = styled.button`
+  ${tw`font-sans relative py-2 px-4 mt-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500`}
+`
+
+export default function IndexPage ({ data }) {
   return (
-    <main style={pageStyles}>
-      <title>Home Page</title>
-      <h1 style={headingStyles}>
-        Congratulations
-        <br />
-        <span style={headingAccentStyles}>— you just made a Gatsby site! </span>
-        <span role="img" aria-label="Party popper emojis">
-          🎉🎉🎉
-        </span>
-      </h1>
-      <p style={paragraphStyles}>
-        Edit <code style={codeStyles}>src/pages/index.js</code> to see this page
-        update in real-time.{" "}
-        <span role="img" aria-label="Sunglasses smiley emoji">
-          😎
-        </span>
-      </p>
-      <ul style={listStyles}>
-        <li style={docLinkStyle}>
-          <a
-            style={linkStyle}
-            href={`${docLink.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter`}
-          >
-            {docLink.text}
-          </a>
-        </li>
-        {links.map(link => (
-          <li style={{ ...listItemStyles, color: link.color }}>
-            <span>
-              <a
-                style={linkStyle}
-                href={`${link.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter`}
-              >
-                {link.text}
-              </a>
-              <p style={descriptionStyle}>{link.description}</p>
-            </span>
-          </li>
-        ))}
-      </ul>
-      <img
-        alt="Gatsby G Logo"
-        src="data:image/svg+xml,%3Csvg width='24' height='24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 2a10 10 0 110 20 10 10 0 010-20zm0 2c-3.73 0-6.86 2.55-7.75 6L14 19.75c3.45-.89 6-4.02 6-7.75h-5.25v1.5h3.45a6.37 6.37 0 01-3.89 4.44L6.06 9.69C7 7.31 9.3 5.63 12 5.63c2.13 0 4 1.04 5.18 2.65l1.23-1.06A7.959 7.959 0 0012 4zm-8 8a8 8 0 008 8c.04 0 .09 0-8-8z' fill='%23639'/%3E%3C/svg%3E"
-      />
-    </main>
+    <Page>
+      <ContentContainer>
+        <FlexContainerFull>
+          <Row>
+            <SVGContainer>
+              <PaineSVG height="12rem" width="auto" />
+            </SVGContainer>
+            <TextContainer>
+              <Title>I'm Paine <span role="img" aria-label="waving hand">👋🏼</span></Title>
+              <Paragraph>
+              Full-stack software engineer and designer <a href="https://www.att.com/" target="_blank" rel="noreferrer noopener">@AT&T</a>.
+              </Paragraph>
+              <Paragraph>
+              Adventurer, artist, and dreamer.
+              </Paragraph>
+              <Button>
+                View my work
+              </Button>
+              <ContactRow>
+                <ContactLink href="https://github.com/paineleffler" target="_blank" rel="noreferrer noopener">Github</ContactLink>
+                <ContactLink href="https://read.cv/paine" target="_blank" rel="noreferrer noopener">Resume</ContactLink>
+                <ContactLink href="https://paine.dev" target="_blank" rel="noreferrer noopener">Terminal</ContactLink>
+              </ContactRow>
+            </TextContainer>
+          </Row>
+        </FlexContainerFull>
+        {/* begin portfolio */}
+        <FlexContainerFull>
+          <div>
+            <Title>Some of my recent work...</Title>
+            <Subtitle>Most of my work has been React and React Native Apps with GraphQL and NodeJS backends.</Subtitle>
+          </div>
+        </FlexContainerFull>
+
+        {/* begin wishlist */}
+        <FlexContainerFull>
+          <Row>
+            <ScreenshotContainer>
+              <Img fluid={data.wishlistMain.childImageSharp.fluid} alt="" />
+            </ScreenshotContainer>
+            <ProjectTextContainer>
+              <Title>Wishlist</Title>
+              <Subtitle>A collaborative productivity web application.</Subtitle>
+              <Paragraph>Wishlist was built out of a necessity of a place for do-ers to organize personal items or project work without creating additional overhead. My main goal was to allow people to use a process that worked for them, instead of trying to teach or show them ONE way to do project management. Wishlist was designed and developed by me from scratch in the beginning. Later, it was inter open-sourced and grew in features and contributors.</Paragraph>
+            </ProjectTextContainer>
+          </Row>
+        </FlexContainerFull>
+        
+        {/* begin openspace */}
+        <FlexContainerFull>
+          <Row>
+            <ProjectTextContainer>
+              <Title>OpenSpace</Title>
+              <Subtitle>An inter open-source platform for innovation.</Subtitle>
+              <Paragraph>OpenSpace was built as a knowledge sharing and collaboration platform to change the idea of assignment based work and learning. OpenSpace gives more code visibility to employees of the company. We really wanted this to be the place to build an internal portfolio and give people an opportunity to lead and teach others.</Paragraph>
+            </ProjectTextContainer>
+            <ScreenshotContainer>
+              <Img fluid={data.openspaceMain.childImageSharp.fluid} alt="" />
+            </ScreenshotContainer>
+          </Row>
+        </FlexContainerFull>
+        
+        {/* begin OC */}
+        <FlexContainerFull>
+          <Row>
+            <ScreenshotContainer>
+              <Img fluid={data.ocMain.childImageSharp.fluid} alt="" />
+            </ScreenshotContainer>
+            <ProjectTextContainer>
+              <Title>OurCalling</Title>
+              <Subtitle>A mobile resource to support our homeless neighbors.</Subtitle>
+              <Paragraph>This mobile app was created in conjunction with <a href="https://www.ourcalling.org/" target="_blank" rel="noreferrer noopener">OurCalling</a>, an organization based in Dallas, TX. The mobile app was focused on connecting people in need with 8 main resource types. In addition to connecting people to resources, we enabled people to donate and help identify people in need by location so that an outreach team could bring assistance.</Paragraph>
+            </ProjectTextContainer>
+          </Row>
+        </FlexContainerFull>
+      </ContentContainer>
+    </Page>
   )
 }
 
-export default IndexPage
+export const desktopScreenshot = graphql`
+  fragment desktopScreenshot on File {
+    childImageSharp {
+      fluid(maxWidth: 1512, maxHeight: 953) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+`
+
+export const mobileScreenshot = graphql`
+  fragment mobileScreenshot on File {
+    childImageSharp {
+      fluid(maxWidth: 624, maxHeight: 1344) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+`
+
+export const query = graphql`
+  query {
+    wishlistMain: file(relativePath: { eq: "wishlist-3-light.png" }) {
+      ...desktopScreenshot
+    }
+    openspaceMain: file(relativePath: { eq: "openspace-1.png" }) {
+      ...desktopScreenshot
+    }
+    ocMain: file(relativePath: { eq: "oc.png" }) {
+      ...desktopScreenshot
+    }
+  }
+`

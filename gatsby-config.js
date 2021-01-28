@@ -3,6 +3,7 @@ module.exports = {
     title: "portfolio",
   },
   plugins: [
+    "gatsby-plugin-postcss",
     "gatsby-plugin-netlify-cms",
     "gatsby-plugin-styled-components",
     {
