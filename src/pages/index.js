@@ -25,7 +25,7 @@ const ContentContainer = styled.div`
 `
 
 const FlexContainerFull = styled.div`
-  ${tw`flex flex-row justify-center items-center h-screen`};
+  ${tw`flex flex-row justify-center items-center min-h-screen`};
 `
 
 const Footer = styled.div`
@@ -65,7 +65,7 @@ const ContactLink = styled.a`
 `
 
 const Button = styled.button`
-  ${tw`font-sans relative py-2 px-4 mt-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500`}
+  ${tw`font-sans relative py-2 px-4 my-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500`}
 `
 
 const TechRow = styled.div`
