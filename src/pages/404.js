@@ -1,15 +1,21 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
+
 import Page from '../components/Page'
+import { FlexContainerFullCol, ContentContainer, Title, Paragraph, Button } from '../lib/StyledComponents'
 
 // markup
 const NotFoundPage = () => {
   return (
     <Page>
       <title>Page Not Found</title>
-      <h1>oops</h1>
-      <p>this page doesn't exist</p>
-      <Link to="/">home</Link>
+      <ContentContainer>
+        <FlexContainerFullCol>
+          <Title>Oops...</Title>
+          <Paragraph>This page doesn&apos;t exist.</Paragraph>
+          <Link to="/"><Button>Home</Button></Link>
+        </FlexContainerFullCol>
+      </ContentContainer>
     </Page>
   )
 }

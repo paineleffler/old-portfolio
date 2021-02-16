@@ -1,4 +1,6 @@
 import React from 'react'
+import PropTypes from 'prop-types'
+
 import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
@@ -10,13 +12,17 @@ const GlobalStyle = createGlobalStyle`
   }
 `
 
-const Page = (props) => {
+const Page = ({ children }) => {
   return (
     <>
       <GlobalStyle />
-      { props.children }
+      { children }
     </>
   )
+}
+
+Page.propTypes = {
+  children: PropTypes.element
 }
 
 export default Page

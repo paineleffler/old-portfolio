@@ -1,0 +1,21 @@
+export const ScreenshotCaptions = {
+  'oc-1.png': 'This is the landing screen for the OurCalling App. It automatically pulls up the resources nearest to you, or in an area you searched. Specific resources can be found in the quick bottom drawer or in the filter section. ',
+  'oc-2.png': 'The bottom drawer allows a vertical scroll list of the search results. Each will navigate to their respective details page.',
+  'oc-3.png': 'By tapping a map pin, the details of the location comes up in a swipe-able card on the bottom of the screen',
+  'oc-4.png': 'The filter screen offers finer search criteria by category, age, gender, or common qualifications.',
+  'oc-5.png': 'By tapping on a resource card or list item, you will be able to see details on the resource and be able to directly call, navigate, or view their webpage.',
+  'oc-6.png': 'On the Identify tab, we allow users to submit information on where help is needed. This can be self identified or by a community member. The goal is for an outreach team to view the submission and bring assistance.',
+  'oc-7.png': 'On the side drawer we can quickly access primary tabs and additional secondary pages like the hotline numbers and settings page.',
+  'wishlist-light-1.png': 'The home page for Wishlist, it allows for public board searching and board creation if it does not exist. (light)',
+  'wishlist-light-2.png': 'This is a profile page on Wishlist. Here you can see the boards you have created and the boards you have favorited. (light)',
+  'wishlist-light-3.png': 'This is a board that was created to manage some of my reminders and to-do items. They have custom tags and correlate to different unrelated projects that I am working on. (light)',
+  'wishlist-light-4.png': 'This is the side drawer of the board. This allows general board configuration for tags, permissions, email notifications, and other preferences. (light)',
+  'wishlist-dark-1.png': 'The home page for Wishlist, it allows for public board searching and board creation if it does not exist. (dark)',
+  'wishlist-dark-2.png': 'This is a profile page on Wishlist. Here you can see the boards you have created and the boards you have favorited. (dark)',
+  'wishlist-dark-3.png': 'This is a board that was created to manage some of my reminders and to-do items. They have custom tags and correlate to different unrelated projects that I am working on. (dark)',
+  'wishlist-dark-4.png': 'This is the side drawer of the board. This allows general board configuration for tags, permissions, email notifications, and other preferences. (dark)',
+  'openspace-1.png': 'This is the homepage of OpenSpace, it goes into details about what the goals of the application serves, and allows users to sign up for meetups to learn more.',
+  'openspace-2.png': 'The OpenSpace profile page allows people to showcase their projects and open-source activity.',
+  'openspace-3.png': 'This is a project details page where you can find project activity and how to start contributing.',
+  'openspace-4.png': 'This is a blog on OpenSpace that allows knowledge sharing and showcasing work with in depth descriptions and discussions.'
+}
