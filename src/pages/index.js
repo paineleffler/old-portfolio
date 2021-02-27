@@ -47,8 +47,10 @@ export default function IndexPage ({ data }) {
               <Img fluid={data.wishlistMain.childImageSharp.fluid} alt="Wishlist board screenshot" />
             </ScreenshotContainer>
             <ProjectTextContainer>
-              <Title>Wishlist <span role="img" aria-label="sparkles">✨</span></Title>
-              <Subtitle>A collaborative productivity web application.</Subtitle>
+              <hgroup>
+                <Title>Wishlist <span role="img" aria-label="sparkles">✨</span></Title>
+                <Subtitle>A collaborative productivity web application.</Subtitle>
+              </hgroup>
               <Paragraph>Wishlist was built out of a necessity of a place for do-ers to organize personal items or project work without creating additional overhead. My main goal was to allow people to use a process that worked for them, instead of trying to teach or show them ONE way to do project management. Wishlist was designed and developed by me from scratch in the beginning. Later, it was inter open-sourced and grew in features and contributors.</Paragraph>
               <Button
                 aria-label="View more screenshots and descriptions for the Wishlist application."
@@ -66,8 +68,10 @@ export default function IndexPage ({ data }) {
         <FlexContainerFull>
           <Row>
             <ProjectTextContainer>
-              <Title>OpenSpace <span role="img" aria-label="person on laptop">🧑🏻‍💻</span></Title>
-              <Subtitle>An inter open-source platform for innovation.</Subtitle>
+              <hgroup>
+                <Title>OpenSpace <span role="img" aria-label="person on laptop">🧑🏻‍💻</span></Title>
+                <Subtitle>An inter open-source platform for innovation.</Subtitle>
+              </hgroup>
               <Paragraph>OpenSpace was built as a knowledge sharing and collaboration platform to change the idea of assignment based work and learning. OpenSpace gives more code visibility to employees of the company. We really wanted this to be the place to build an internal portfolio and give people an opportunity to lead and teach others.</Paragraph>
               <Button
                 aria-label="View more screenshots and descriptions for the OpenSpace application."
@@ -91,8 +95,10 @@ export default function IndexPage ({ data }) {
               <Img fluid={data.ocMain.childImageSharp.fluid} alt="Three iPhone devices demoing the OurCalling Mobile App" />
             </ScreenshotContainer>
             <ProjectTextContainer>
-              <Title>OurCalling <span role="img" aria-label="tent">⛺</span></Title>
-              <Subtitle>A mobile resource to support our homeless neighbors.</Subtitle>
+              <hgroup>
+                <Title>OurCalling <span role="img" aria-label="tent">⛺</span></Title>
+                <Subtitle>A mobile resource to support our homeless neighbors.</Subtitle>
+              </hgroup>
               <Paragraph>This mobile app was created in conjunction with <StyledA aria-label="Visit OurCalling to learn more about them." href="https://www.ourcalling.org/" target="_blank" rel="noreferrer noopener">OurCalling</StyledA>, an organization based in Dallas, TX. The mobile app is focused on connecting people in need with 8 main resource types. In addition to connecting people to resources, we enabled people to donate and help identify people in need by location so that an outreach team could bring assistance.</Paragraph>
               <Button
                 aria-label="View more screenshots and descriptions for the OurCalling mobile app."

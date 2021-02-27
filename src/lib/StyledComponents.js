@@ -20,7 +20,7 @@ export const FlexContainerFullCol = styled.div`
   ${tw`flex flex-col justify-center items-center`};
 `
 
-export const Footer = styled.div`
+export const Footer = styled.footer`
   ${tw`flex flex-row justify-center mb-4`};
 `
 
@@ -28,7 +28,7 @@ export const Row = styled.div`
   ${tw`grid grid-cols-2 gap-6 mb-4`};
 `
 
-export const TextContainer = styled.div`
+export const TextContainer = styled.article`
   ${tw`font-sans leading-normal xl:col-span-1 lg:col-span-1 md:col-span-full sm:col-span-full col-span-full`};
 `
 
