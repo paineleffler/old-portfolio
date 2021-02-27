@@ -1,15 +1,15 @@
 import tw, { styled } from 'twin.macro'
 
-export const Title = styled.div`
-  ${tw`xl:text-6xl text-5xl  my-2`};
+export const Title = styled.h1`
+  ${tw`xl:text-5xl lg:text-4xl md:text-3xl sm:text-3xl text-3xl my-4`};
 `
 
-export const Subtitle = styled.div`
-  ${tw`xl:text-3xl text-2xl my-4`};
+export const Subtitle = styled.h2`
+  ${tw`xl:text-3xl lg:text-2xl md:text-2xl sm:text-2xl text-xl my-4`};
 `
 
 export const ContentContainer = styled.div`
-  ${tw`container mx-auto px-4`};
+  ${tw`container mx-auto px-8`};
 `
 
 export const FlexContainerFull = styled.div`
@@ -17,7 +17,7 @@ export const FlexContainerFull = styled.div`
 `
 
 export const FlexContainerFullCol = styled.div`
-  ${tw`flex flex-col justify-center items-center min-h-screen`};
+  ${tw`flex flex-col justify-center items-center`};
 `
 
 export const Footer = styled.div`
@@ -25,35 +25,44 @@ export const Footer = styled.div`
 `
 
 export const Row = styled.div`
-  ${tw`grid grid-cols-4 gap-8`};
+  ${tw`grid grid-cols-2 gap-6 mb-4`};
 `
 
 export const TextContainer = styled.div`
-  ${tw`font-sans leading-normal xl:col-span-3 lg:col-span-3 md:col-span-4 sm:col-span-full col-span-full`};
+  ${tw`font-sans leading-normal xl:col-span-1 lg:col-span-1 md:col-span-full sm:col-span-full col-span-full`};
 `
 
 export const SVGContainer = styled.div`
-  ${tw`xl:col-span-1 lg:col-span-1 md:col-span-4 sm:col-span-full col-span-full`}
+  ${tw`xl:max-h-60 lg:max-h-60 md:max-h-56 sm:max-h-52 max-h-44`}
+  ${tw`xl:col-span-1 lg:col-span-1 md:col-span-full sm:col-span-full col-span-full`}
+  ${tw`xl:mt-auto xl:mr-0 xl:mb-auto xl:ml-auto`}
+  ${tw`lg:mt-auto lg:mr-0 lg:mb-auto lg:ml-auto`}
+  ${tw`md:my-0 md:mx-auto`}
 `
 
 export const ProjectTextContainer = styled.div`
-  ${tw`font-sans leading-normal xl:col-span-2 lg:col-span-2 md:col-span-4 sm:col-span-full col-span-full`};
+  ${tw`font-sans leading-normal xl:col-span-1 lg:col-span-1 md:col-span-full sm:col-span-full col-span-full`};
 `
 
 export const ScreenshotContainer = styled.div`
-  ${tw`xl:col-span-2 lg:col-span-2 md:col-span-4 sm:col-span-full col-span-full`};
+  ${tw`xl:col-span-1 lg:col-span-1 md:col-span-full sm:col-span-full col-span-full`};
 `
 
-export const Paragraph = styled.div`
+export const Paragraph = styled.p`
   ${tw`font-sans leading-normal`}
 `
 
-export const ContactRow = styled.div`
-  ${tw`mt-6 flex`};
+export const Prose = styled.p`
+  ${tw`max-w-prose`}
 `
 
-export const ContactLink = styled.a`
-  ${tw`font-sans mr-2`}
+export const ContactRow = styled.div`
+  ${tw`mt-4 flex`};
+  a {
+    :not(:first-of-type) {
+      margin-left: 1rem;
+    }
+  }
 `
 
 export const Button = styled.button`
@@ -62,4 +71,9 @@ export const Button = styled.button`
 
 export const TechRow = styled.div`
  ${tw`flex flex-1 flex-row justify-around mt-6`};
+`
+
+export const StyledA = styled.a`
+  ${tw`text-indigo-700`};
+  box-shadow: inset 0 -0.125em 0 0 #fff, inset 0 -0.375em 0 0 rgb(199 210 254 / 40%);
 `
