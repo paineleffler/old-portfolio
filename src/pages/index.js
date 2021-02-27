@@ -5,7 +5,7 @@ import { graphql } from 'gatsby'
 import { Element } from 'react-scroll'
 import Carousel, { Modal, ModalGateway } from 'react-images'
 
-import { FlexContainerFull, Row, Title, Paragraph, Button, ContentContainer, Footer, Subtitle, ScreenshotContainer, ProjectTextContainer } from '../lib/StyledComponents'
+import { FlexContainerFull, Row, Title, Paragraph, Button, ContentContainer, Footer, Subtitle, ScreenshotContainer, ProjectTextContainer, StyledA } from '../lib/StyledComponents'
 import { ScreenshotCaptions } from '../lib/TextContent'
 import { desktopScreenshot, mobileScreenshot } from '../lib/Queries'
 import Page from '../components/Page'
@@ -91,7 +91,7 @@ export default function IndexPage ({ data }) {
             <ProjectTextContainer>
               <Title>OurCalling <span role="img" aria-label="tent">⛺</span></Title>
               <Subtitle>A mobile resource to support our homeless neighbors.</Subtitle>
-              <Paragraph>This mobile app was created in conjunction with <a href="https://www.ourcalling.org/" target="_blank" rel="noreferrer noopener">OurCalling</a>, an organization based in Dallas, TX. The mobile app was focused on connecting people in need with 8 main resource types. In addition to connecting people to resources, we enabled people to donate and help identify people in need by location so that an outreach team could bring assistance.</Paragraph>
+              <Paragraph>This mobile app was created in conjunction with <StyledA aria-label="Visit OurCalling to learn more about them." href="https://www.ourcalling.org/" target="_blank" rel="noreferrer noopener">OurCalling</StyledA>, an organization based in Dallas, TX. The mobile app is focused on connecting people in need with 8 main resource types. In addition to connecting people to resources, we enabled people to donate and help identify people in need by location so that an outreach team could bring assistance.</Paragraph>
               <Button
                 aria-label="View more screenshots and descriptions for the OurCalling mobile app."
                 onClick={() => {
