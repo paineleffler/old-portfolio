@@ -11,6 +11,7 @@ import { desktopScreenshot, mobileScreenshot } from '../lib/Queries'
 import Page from '../components/Page'
 import Hero from '../components/Hero'
 import About from '../components/About'
+import SEO from '../lib/SEO'
 
 export default function IndexPage ({ data }) {
   const [modalIsOpen, setModalIsOpen] = useState(false)
@@ -31,6 +32,7 @@ export default function IndexPage ({ data }) {
   return (
     <Page>
       <>
+      <SEO title="Paine's Portfolio Website" description="This is my home page containing my work and some information about me." />
       <ContentContainer>
         <Hero />
         {/* begin portfolio */}

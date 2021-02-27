@@ -1,6 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: 'portfolio'
+    defaultTitle: 'Paine\'s Portfolio Website',
+    siteUrl: 'https://paineleffler.com',
+    defaultDescription: 'Paine\'s website to showcase recent works and skills.'
   },
   plugins: [
     'gatsby-plugin-postcss',
@@ -29,6 +31,13 @@ module.exports = {
         path: './src/images/'
       },
       __key: 'images'
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://paineleffler.com',
+        policy: [{ userAgent: '*', allow: '/' }]
+      }
     }
   ]
 }

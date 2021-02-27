@@ -3,13 +3,14 @@ import { Link } from 'gatsby'
 
 import Page from '../components/Page'
 import { FlexContainerFullCol, ContentContainer, Title, Paragraph, Button } from '../lib/StyledComponents'
+import SEO from '../lib/SEO'
 
 // markup
 const NotFoundPage = () => {
   return (
     <Page>
       <>
-      <title>Page Not Found</title>
+      <SEO title="Page Not Found" description="You have navigated to a nonexistent page." />
       <ContentContainer>
         <FlexContainerFullCol>
           <Title>Oops...</Title>
