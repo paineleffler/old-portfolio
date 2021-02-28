@@ -25,7 +25,7 @@ export const Footer = styled.footer`
 `
 
 export const Row = styled.div`
-  ${tw`grid grid-cols-2 gap-6 mb-4`};
+  ${tw`grid grid-cols-2 gap-8 mb-4`};
 `
 
 export const TextContainer = styled.article`
