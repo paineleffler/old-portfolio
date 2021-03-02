@@ -8,7 +8,7 @@ export default function Hero () {
     <FlexContainerFull>
       <Row>
         <SVGContainer>
-          <PaineSVG height="100%" width="100%" />
+          <PaineSVG width="100%"/>
         </SVGContainer>
         <TextContainer>
           <Title>I&apos;m Paine <span role="img" aria-label="waving hand">👋🏼</span></Title>

@@ -33,11 +33,7 @@ export const TextContainer = styled.article`
 `
 
 export const SVGContainer = styled.div`
-  ${tw`xl:max-h-60 lg:max-h-60 md:max-h-56 sm:max-h-52 max-h-44`}
-  ${tw`xl:col-span-1 lg:col-span-1 md:col-span-full sm:col-span-full col-span-full`}
-  ${tw`xl:mt-auto xl:mr-0 xl:mb-auto xl:ml-auto`}
-  ${tw`lg:mt-auto lg:mr-0 lg:mb-auto lg:ml-auto`}
-  ${tw`md:my-0 md:mx-auto`}
+  ${tw`xl:col-span-1 lg:col-span-1 md:col-span-full sm:col-span-full col-span-full`};
 `
 
 export const ProjectTextContainer = styled.div`
