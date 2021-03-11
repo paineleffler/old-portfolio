@@ -22,12 +22,12 @@ export default function IndexPage ({ data }) {
       <SEO title="Paine's Portfolio Website" description="This is my home page containing my work and some information about me." />
       <ContentContainer>
         <Hero />
-        {/* begin portfolio */}
-        <About />
+
+        {/* <About />
         <Element id="portfolio" name="portfolio">
           <Title className="text-center">Some of my recent work...</Title>
         </Element>
-        {/* begin wishlist */}
+
         <Project
           mainImage={data.wishlistMain.childImageSharp.fluid}
           mainImageAlt={'Wishlist board screenshot showcasing a organized kanban board with columns of tasks with assignees, descriptions, and tags.'}
@@ -41,7 +41,6 @@ export default function IndexPage ({ data }) {
           setModalIsOpen={setModalIsOpen}
         />
 
-        {/* begin openspace */}
         <Project
           mainImage={data.openspaceMain.childImageSharp.fluid}
           mainImageAlt={'OpenSpace Home Page Screenshot showing a flow of ideas among people with buttons for viewing projects and creating a project.'}
@@ -55,7 +54,6 @@ export default function IndexPage ({ data }) {
           setModalIsOpen={setModalIsOpen}
         />
 
-        {/* begin OC */}
         <Project
           mainImage={data.ocMain.childImageSharp.fluid}
           mainImageAlt={'Three iPhone devices demoing the map view, the location pins, the location cards, and the bottom drawer containing the resources on the OurCalling Mobile App'}
@@ -70,63 +68,63 @@ export default function IndexPage ({ data }) {
         />
         <Footer>
           <Paragraph>Made with lots of <span role="img" aria-label="coffee">☕</span></Paragraph>
-        </Footer>
+        </Footer> */}
       </ContentContainer>
-      <ModalGateway>
+      {/* <ModalGateway>
         { modalIsOpen &&
           <Modal onClose={() => { setModalIsOpen(false) }}>
             <Carousel views={activeView} activeIndex={0}/>
           </Modal>
         }
-      </ModalGateway>
+      </ModalGateway> */}
       </>
     </Page>
   )
 }
 
-export const query = graphql`
-  query {
-    wishlistMain: file(relativePath: { eq: "wishlist-light-3.png" }) {
-      ...desktopScreenshot
-    }
-    openspaceMain: file(relativePath: { eq: "openspace-1.png" }) {
-      ...desktopScreenshot
-    }
-    ocMain: file(relativePath: { eq: "oc.png" }) {
-      ...desktopScreenshot
-    }
-    wishlistImages: allImageSharp(filter: {fluid: {src: {regex: "/wishlist/"}}}) {
-      edges {
-        node {
-          fluid(maxWidth: 1512, maxHeight: 953) {
-            originalName
-            src
-          }
-        }
-      }
-    }
-    ocImages: allImageSharp(filter: {fluid: {src: {regex: "/oc-/"}}}) {
-      edges {
-        node {
-          fluid(maxWidth: 312, maxHeight: 672) {
-            originalName
-            src
-          }
-        }
-      }
-    }
-    openspaceImages: allImageSharp(filter: {fluid: {src: {regex: "/openspace/"}}}) {
-      edges {
-        node {
-          fluid(maxWidth: 1512, maxHeight: 953) {
-            originalName
-            src
-          }
-        }
-      }
-    }
-  }
-`
+// export const query = graphql`
+//   query {
+//     wishlistMain: file(relativePath: { eq: "wishlist-light-3.png" }) {
+//       ...desktopScreenshot
+//     }
+//     openspaceMain: file(relativePath: { eq: "openspace-1.png" }) {
+//       ...desktopScreenshot
+//     }
+//     ocMain: file(relativePath: { eq: "oc.png" }) {
+//       ...desktopScreenshot
+//     }
+//     wishlistImages: allImageSharp(filter: {fluid: {src: {regex: "/wishlist/"}}}) {
+//       edges {
+//         node {
+//           fluid(maxWidth: 1512, maxHeight: 953) {
+//             originalName
+//             src
+//           }
+//         }
+//       }
+//     }
+//     ocImages: allImageSharp(filter: {fluid: {src: {regex: "/oc-/"}}}) {
+//       edges {
+//         node {
+//           fluid(maxWidth: 312, maxHeight: 672) {
+//             originalName
+//             src
+//           }
+//         }
+//       }
+//     }
+//     openspaceImages: allImageSharp(filter: {fluid: {src: {regex: "/openspace/"}}}) {
+//       edges {
+//         node {
+//           fluid(maxWidth: 1512, maxHeight: 953) {
+//             originalName
+//             src
+//           }
+//         }
+//       }
+//     }
+//   }
+// `
 
 export { desktopScreenshot, mobileScreenshot }
 

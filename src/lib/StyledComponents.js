@@ -54,7 +54,7 @@ export const Prose = styled.p`
 
 export const ContactRow = styled.div`
   ${tw`mt-4 flex`};
-  a {
+  p {
     :not(:first-of-type) {
       margin-left: 1rem;
     }
@@ -70,6 +70,6 @@ export const TechRow = styled.div`
 `
 
 export const StyledA = styled.a`
-  ${tw`text-indigo-700`};
-  box-shadow: inset 0 -0.125em 0 0 #fff, inset 0 -0.375em 0 0 rgb(199 210 254 / 40%);
+  ${tw`text-gray-700`};
+  box-shadow: inset 0 -0.125em 0 0 #fff, inset 0 -0.375em 0 0 rgb(156 163 175 / 40%);
 `
