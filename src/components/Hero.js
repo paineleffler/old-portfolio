@@ -13,7 +13,7 @@ export default function Hero () {
         <TextContainer>
           <Title>I&apos;m Paine <span role="img" aria-label="waving hand">👋🏼</span></Title>
           <Paragraph>
-            Incoming Full-stack Engineer at <StyledA href="https://www.apple.com/" aria-label="Visit Apple's Website" target="_blank" rel="noreferrer noopener">Apple </StyledA>.
+            Full-stack Engineer at <StyledA href="https://www.apple.com/" aria-label="Visit Apple's Website" target="_blank" rel="noreferrer noopener">Apple </StyledA>.
           </Paragraph>
           <Paragraph>
             Adventurer, artist, and dreamer.

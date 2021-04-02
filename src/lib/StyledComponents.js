@@ -1,7 +1,7 @@
 import tw, { styled } from 'twin.macro'
 
 export const Title = styled.h1`
-  ${tw`xl:text-5xl lg:text-4xl md:text-3xl sm:text-3xl text-3xl my-4`};
+  ${tw`xl:text-5xl lg:text-4xl md:text-3xl sm:text-3xl text-3xl mb-4`};
 `
 
 export const Subtitle = styled.h2`
@@ -29,11 +29,11 @@ export const Row = styled.div`
 `
 
 export const TextContainer = styled.article`
-  ${tw`font-sans leading-normal xl:col-span-1 lg:col-span-1 md:col-span-full sm:col-span-full col-span-full`};
+  ${tw`font-sans leading-normal xl:col-span-1 lg:col-span-1 md:col-span-full sm:col-span-full col-span-full my-auto`};
 `
 
 export const SVGContainer = styled.div`
-  ${tw`xl:col-span-1 lg:col-span-1 md:col-span-full sm:col-span-full col-span-full`};
+  ${tw`xl:col-span-1 lg:col-span-1 md:col-span-full sm:col-span-full col-span-full max-w-xs`};
 `
 
 export const ProjectTextContainer = styled.div`
@@ -62,7 +62,7 @@ export const ContactRow = styled.div`
 `
 
 export const Button = styled.button`
-  ${tw`font-sans relative py-2 px-4 my-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500`}
+  ${tw`font-sans relative py-2 px-4 my-4 border border-transparent text-sm font-medium rounded-md text-white bg-gray-600 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500`}
 `
 
 export const TechRow = styled.div`
