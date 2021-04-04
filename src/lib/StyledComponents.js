@@ -9,11 +9,11 @@ export const Subtitle = styled.h2`
 `
 
 export const ContentContainer = styled.div`
-  ${tw`container mx-auto px-8`};
+  ${tw`container mx-auto px-8 h-full`};
 `
 
 export const FlexContainerFull = styled.div`
-  ${tw`flex flex-row justify-center items-center min-h-screen`};
+  ${tw`flex flex-row justify-center items-center h-full`};
 `
 
 export const FlexContainerFullCol = styled.div`

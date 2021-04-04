@@ -18,7 +18,6 @@ export default function IndexPage ({ data }) {
 
   return (
     <Page>
-      <>
       <SEO title="Paine's Portfolio Website" description="This is my home page containing my work and some information about me." />
       <ContentContainer>
         <Hero />
@@ -77,7 +76,6 @@ export default function IndexPage ({ data }) {
           </Modal>
         }
       </ModalGateway> */}
-      </>
     </Page>
   )
 }
