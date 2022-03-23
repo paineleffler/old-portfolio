@@ -9,11 +9,11 @@ export const Subtitle = styled.h2`
 `
 
 export const ContentContainer = styled.div`
-  ${tw`container mx-auto px-8 h-full`};
+  ${tw`container mx-auto px-8 min-h-screen`};
 `
 
 export const FlexContainerFull = styled.div`
-  ${tw`flex flex-row justify-center items-center h-full`};
+  ${tw`flex flex-row justify-center items-center min-h-screen`};
 `
 
 export const FlexContainerFullCol = styled.div`
@@ -29,11 +29,11 @@ export const Row = styled.div`
 `
 
 export const TextContainer = styled.article`
-  ${tw`font-sans leading-normal xl:col-span-1 lg:col-span-1 md:col-span-full sm:col-span-full col-span-full my-auto`};
+  ${tw`font-sans leading-normal xl:col-span-1 lg:col-span-1 md:col-span-1 sm:col-span-full col-span-full my-auto`};
 `
 
 export const SVGContainer = styled.div`
-  ${tw`xl:col-span-1 lg:col-span-1 md:col-span-full sm:col-span-full col-span-full max-w-xs`};
+  ${tw`xl:col-span-1 lg:col-span-1 md:col-span-1 sm:col-span-full col-span-full max-w-xs`};
 `
 
 export const ProjectTextContainer = styled.div`
@@ -62,7 +62,7 @@ export const ContactRow = styled.div`
 `
 
 export const Button = styled.button`
-  ${tw`font-sans relative py-2 px-4 my-4 border border-transparent text-sm font-medium rounded-md text-white bg-gray-600 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500`}
+  ${tw`font-sans relative py-2 px-4 my-4 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500`}
 `
 
 export const TechRow = styled.div`
@@ -70,6 +70,6 @@ export const TechRow = styled.div`
 `
 
 export const StyledA = styled.a`
-  ${tw`text-gray-700`};
-  box-shadow: inset 0 -0.125em 0 0 #fff, inset 0 -0.375em 0 0 rgb(156 163 175 / 40%);
+  ${tw`text-blue-700`};
+  box-shadow: inset 0 -0.125em 0 0 #fff, inset 0 -0.375em 0 0 rgb(79 70 229 / 10%);
 `
