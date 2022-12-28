@@ -13,7 +13,7 @@ export default function Hero () {
         <TextContainer>
           <Title>I&apos;m Paine <span role="img" aria-label="waving hand">👋🏼</span></Title>
           <Paragraph>
-            Full-stack Engineer at Apple.
+            Frontend dev at Shopify.
           </Paragraph>
           <Paragraph>
             Adventurer, artist, and dreamer.
@@ -26,8 +26,7 @@ export default function Hero () {
           <ContactRow>
             <Paragraph><StyledA href="https://github.com/paineleffler" aria-label="Visit my Github profile page." target="_blank" rel="noreferrer noopener"><span role="img" aria-label="octopus">🐙</span> Github</StyledA></Paragraph>
             <Paragraph><StyledA href="https://read.cv/paine" aria-label="View my Resume in a Web Format" target="_blank" rel="noreferrer noopener"><span role="img" aria-label="paper">📝</span> Resume</StyledA></Paragraph>
-            <Paragraph><StyledA href="https://paine.dev" aria-label="Visit my terminal developer website." target="_blank" rel="noreferrer noopener"><span role="img" aria-label="laptop">💻</span> Psh</StyledA></Paragraph>
-            <Paragraph><StyledA href="https://blog.paineleffler.com" aria-label="Visit my blog, work in progress!" target="_blank" rel="noreferrer noopener"><span role="img" aria-label="writing">✍🏻 Blog</span></StyledA></Paragraph>
+            <Paragraph><StyledA href="https://paine.dev" aria-label="Visit my terminal developer website." target="_blank" rel="noreferrer noopener"><span role="img" aria-label="laptop">💻</span> Terminal</StyledA></Paragraph>
           </ContactRow>
         </TextContainer>
       </Row>
